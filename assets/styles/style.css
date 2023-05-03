@@ -6,4 +6,45 @@
 
 .navbar a{
     font-size: 15px;
+    color: #757783;
+    font-weight: 600;
+}
+
+.navbar a.text-black{
+    color: #000;
+}
+.navbar a.active {
+    color: black;
+    background: transparent;
+}
+.navbar-start {
+    width: auto;
+    margin-right: 25px
+}
+.fs-14{
+    font-size: 14px !important;
+}
+.text-golden{
+    color: #BDA067
+}
+
+.navbar a.text-white{
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px){
+    .navbar-start {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-btn {
+        position: relative;
+        left: -100%;
+    }
+    .menu {
+        position: relative;
+        left: -100%;
+    }
 }

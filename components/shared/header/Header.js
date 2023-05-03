@@ -2,20 +2,25 @@ import React from "react";
 import logo from "../../../assets/images/logo.svg";
 import burger from "../../../assets/images/burger.svg";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="custom-container mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn border-none menu-btn bg-transparent focus:bg-transparent lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
-                fill="none"
+                fill="black"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="black"
               >
                 <path
                   strokeLinecap="round"
@@ -30,73 +35,150 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Start</a>
-              </li>
-              <li tabIndex={0}>
-                <a className="justify-between">
-                  Parent
-                  <svg
-                    className="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                  </svg>
-                </a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <Link
+                  className={`font-semibold ${
+                    router.pathname == "/" ? "active" : ""
+                  }`}
+                  href={"/"}
+                >
+                  Start
+                </Link>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link
+                  className={`font-semibold ${
+                    router.pathname == "/o-nas" ? "active" : ""
+                  }`}
+                  href={"/o-nas"}
+                >
+                  O nas
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`font-semibold ${
+                    router.pathname == "/listings" ? "active" : ""
+                  }`}
+                  href={"/listings"}
+                >
+                  Apartamenty
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`font-semibold ${
+                    router.pathname == "/pensjonaty" ? "active" : ""
+                  }`}
+                  href={"/pensjonaty"}
+                >
+                  Pensjonaty
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`font-semibold ${
+                    router.pathname == "/dla-wlascicieli" ? "active" : ""
+                  }`}
+                  href={"/dla-wlascicieli"}
+                >
+                  Dla właścicieli
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`font-semibold ${
+                    router.pathname == "/contact" ? "active" : ""
+                  }`}
+                  href={"/contact"}
+                >
+                  Kontakt
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">
+          <Link href={"/"} className="">
             <Image src={logo} alt="Logo" />
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <a>
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <Link
+                className={`font-semibold ${
+                  router.pathname == "/" ? "active" : ""
+                }`}
+                href={"/"}
+              >
+                Start
+              </Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link
+                className={`font-semibold ${
+                  router.pathname == "/o-nas" ? "active" : ""
+                }`}
+                href={"/o-nas"}
+              >
+                O nas
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`font-semibold ${
+                  router.pathname == "/listings" ? "active" : ""
+                }`}
+                href={"/listings"}
+              >
+                Apartamenty
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`font-semibold ${
+                  router.pathname == "/pensjonaty" ? "active" : ""
+                }`}
+                href={"/pensjonaty"}
+              >
+                Pensjonaty
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`font-semibold ${
+                  router.pathname == "/dla-wlascicieli" ? "active" : ""
+                }`}
+                href={"/dla-wlascicieli"}
+              >
+                Dla właścicieli
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`font-semibold ${
+                  router.pathname == "/contact" ? "active" : ""
+                }`}
+                href={"/contact"}
+              >
+                Kontakt
+              </Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Get started</a>
+        <div className="navbar-end lg:flex hidden">
+          <Link
+            href={"tel:+48 512 569 822"}
+            className="flex justify-start items-center btn bg-transparent hover:bg-transparent fs-14 border-none text-black"
+          >
+            <FiPhoneCall className="mr-2 text-golden" />
+            +48 512 569 822
+          </Link>
+
+          <Link
+            className="btn px-5 bg-black text-white rounded-full fs-14"
+            href={"/contact"}
+          >
+            Rezerwuj online <FiArrowUpRight className="ml-2 text-lg" />
+          </Link>
         </div>
       </div>
     </div>
