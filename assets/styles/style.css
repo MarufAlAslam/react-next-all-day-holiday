@@ -32,6 +32,21 @@
     color: #fff;
 }
 
+.btn-golden{
+    background: #BDA067;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.fs-13{
+    font-size: 13px !important;
+}
+
 
 @media screen and (max-width: 768px){
     .navbar-start {
