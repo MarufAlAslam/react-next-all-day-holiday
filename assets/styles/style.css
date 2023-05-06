@@ -103,6 +103,10 @@ button.prev {
     padding: 20px !important;
 }
 
+.ls-2{
+    letter-spacing: 4px;
+}
+
 
 @media screen and (max-width: 768px){
     .navbar-start {

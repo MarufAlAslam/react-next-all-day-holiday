@@ -1,6 +1,6 @@
 import Hero from '../components/hero/Hero'
 import CarouselSlider from '../components/slider/Slider'
-// import Carousel from '../components/slider/Slider'
+import BigImage from '../components/bigImage/BigImage'
 
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
     <>
     <Hero/>
     <CarouselSlider/>
+    <BigImage/>
     </>
   )
 }
