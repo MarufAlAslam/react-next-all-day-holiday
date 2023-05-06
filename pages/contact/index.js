@@ -1,6 +1,7 @@
 import React from "react";
 import Team from "../../components/team/Team";
 import ContactForm from "../../components/contactForm/ContactForm";
+import Faq from "../../components/faq/Faq";
 
 const componentName = () => {
   return (
@@ -13,6 +14,10 @@ const componentName = () => {
       <Team />
       <div className="bg-[#F8F8F8]">
         <ContactForm />
+      </div>
+
+      <div className="custom-container py-10">
+        <Faq />
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import { FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
 import { Input } from "antd";
-import TextArea from "antd/es/input/TextArea";
 
 const ContactForm = () => {
   return (
@@ -52,7 +51,7 @@ const ContactForm = () => {
                   <label className="text-xs text-green-600">
                   Wiadomość <span className="text-red-500">*</span>
                   </label>
-                  <TextArea placeholder="Wiadomość*" className="p-0 text-xl w-full resize-none" required/>
+                  <textarea placeholder="Wiadomość*" className="p-0 text-xl w-full resize-none" required/>
                 </div>
               </div>
           </form>
