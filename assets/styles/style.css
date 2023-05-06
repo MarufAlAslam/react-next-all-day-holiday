@@ -85,6 +85,24 @@ input{
     border: none !important;
 }
 
+button.next {
+    position: absolute;
+    right: 0;
+    top: -88px;
+}
+
+button.prev {
+    position: absolute;
+    right: 70px;
+    top: -88px;
+}
+.slide img {
+    width: 100% !important;
+}
+.slide{
+    padding: 20px !important;
+}
+
 
 @media screen and (max-width: 768px){
     .navbar-start {

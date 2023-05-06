@@ -42,9 +42,9 @@ const Hero = () => {
               <FaUsers className="text-2xl" />
               <div className="content w-full ml-3">
                 <p className="font-[500] text-[#757783]">Ilość osób</p>
-                <Select className="w-full border-none p-0">
-                    <Select.Option value="demo">Demo</Select.Option>
-                </Select>
+                <select className="w-full py-3 border-none">
+                    <option value="demo">Demo</option>
+                </select>
               </div>
             </div>
             <div className="flex justify-start items-center px-5 py-3">
