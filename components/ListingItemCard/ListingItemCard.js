@@ -6,10 +6,12 @@ import { FaHeart, FaStar, FaStarHalf } from "react-icons/fa";
 import { CgSwap } from "react-icons/cg";
 import { IoPeople, IoBedSharp } from "react-icons/io5";
 import { AiOutlineHeart } from "react-icons/ai";
+import Link from "next/link";
 
 const ListingItemCard = (room) => {
   return (
-    <div className="card border mb-5">
+    <Link href={"/room-details"}>
+        <div className="card border mb-5">
       <div className="card-body p-3">
         <div className="lg:flex justify-between items-center">
           <div className="image-holder lg:w-3/12 w-full">
@@ -75,6 +77,7 @@ const ListingItemCard = (room) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
