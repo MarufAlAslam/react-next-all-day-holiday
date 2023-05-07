@@ -160,6 +160,38 @@ button.prev {
     resize: 0;
 }
 
+.btn-gray{
+  background-color: #F4F4F4;
+  color: black;
+  border: unset;
+  font-size: 14px;
+}
+.badge{
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: unset;
+}
+.golden-badge{
+  background-color: #BDA067;
+  color: white;
+}
+.bg-gray{
+  background-color: #F4F4F4;
+}
+.tab-btn{
+  background-color: #F4F4F4;
+  border: unset;
+  color: black;
+  font-size: 14px;
+}
+.tab-btn.active{
+  background-color: white;
+}
+
 
 @media screen and (max-width: 768px) {
   .navbar-start {

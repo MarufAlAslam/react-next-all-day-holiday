@@ -10,7 +10,7 @@ import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 const Header = () => {
   const router = useRouter();
   return (
-    <div className="custom-container mx-auto">
+    <div className="custom-container py-3 mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
