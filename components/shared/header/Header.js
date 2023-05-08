@@ -14,7 +14,7 @@ const Header = () => {
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn border-none menu-btn bg-transparent focus:bg-transparent lg:hidden">
+            <label tabIndex={0} className="btn menubtn border-none menu-btn bg-transparent focus:bg-transparent lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
