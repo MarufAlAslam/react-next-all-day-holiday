@@ -47,7 +47,7 @@ const Faq = () => {
     <section className="">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl" data-aos="fade-down">
+          <h2 className="md:text-4xl text-xl" data-aos="fade-down">
             Najczęstsze pytania
           </h2>
         </div>

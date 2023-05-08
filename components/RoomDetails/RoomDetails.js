@@ -1,4 +1,5 @@
 import { Button, Card, DatePicker, Input, Progress } from "antd";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { CgSwap } from "react-icons/cg";
 import {
@@ -12,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoBedSharp, IoPeople } from "react-icons/io5";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Details = () => {
   const [reviewState, setReviewState] = useState([]);
@@ -122,20 +124,20 @@ const Details = () => {
                 {room.name}
               </h2>
 
-              <div className="flex mt-6 justify-start items-center">
-                <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center">
+              <div className="md:flex mt-6 justify-start items-center">
+                <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:mt-0 mt-3">
                   <CgSwap className="text-xl mr-1" />
                   <span className="text-[#757783] font-[600] text-sm">
                     {room.size} m<sup>2</sup>
                   </span>
                 </div>
-                <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                   <IoPeople className="mr-1" />
                   <span className="text-[#757783] font-[600] text-sm">
                     {room.guests} Gośći
                   </span>
                 </div>
-                <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                   <IoBedSharp className="mr-1" />
                   <span className="text-[#757783] font-[600] text-sm">
                     {room.beds} Sypialnie
@@ -158,38 +160,38 @@ const Details = () => {
                 <p className="text-lg mb-2 font-[600] text-black">
                   Udogodnienia pokoju
                 </p>
-                <div className="flex flex-wrap mt-4 justify-start items-center">
-                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center">
+                <div className="md:flex flex-wrap mt-4 justify-start items-center">
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:mt-0 mt-3">
                     <CgSwap className="text-xl mr-1" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.size} m<sup>2</sup>
                     </span>
                   </div>
-                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                     <IoPeople className="mr-1" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.guests} Gośći
                     </span>
                   </div>
-                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                     <IoBedSharp className="mr-1" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.beds} Sypialnie
                     </span>
                   </div>
-                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                     <CgSwap className="text-xl mr-1" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.size} m<sup>2</sup>
                     </span>
                   </div>
-                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                     <IoPeople className="mr-1" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.guests} Gośći
                     </span>
                   </div>
-                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center ml-5">
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
                     <IoBedSharp className="mr-1" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.beds} Sypialnie
@@ -218,7 +220,7 @@ const Details = () => {
                       </span>
                     </div>
 
-                    <div className="mt-4 grid lg:grid-cols-2 grid-cols-1 gap-10">
+                    <div className="mt-4 grid lg:grid-cols-2 grid-cols-1 lg:gap-10">
                       <div>
                         <div className="flex mb-4 justify-between items-center">
                           <span className="font-[500]">5</span>
@@ -276,7 +278,7 @@ const Details = () => {
                 </Card>
 
                 {/* reviews */}
-                <div className="mt-5">
+                <div className="my-5">
                   {reviewState.map((review, index) => (
                     <div className="review-holder border-b py-8" key={index}>
                       <div className="flex justify-start items-center">
@@ -316,6 +318,22 @@ const Details = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+
+                <Link
+                  className="btn px-5 bg-black text-white rounded-full fs-14"
+                  href={"/contact"}
+                >
+                  Zobacz więcej <FiArrowUpRight className="ml-2 text-lg" />
+                </Link>
+
+                <div className="mt-6 border-t py-5">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.101861462133!2d-118.29201182363052!3d34.14373601289254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c0623fe71971%3A0xc829e89a5dcc767e!2s4730%20Crystal%20Springs%20Dr%2C%20Los%20Angeles%2C%20CA%2090027%2C%20USA!5e0!3m2!1sen!2sbd!4v1683521314376!5m2!1sen!2sbd"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>

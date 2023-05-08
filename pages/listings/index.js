@@ -75,8 +75,8 @@ const Listings = () => {
   return (
     <div className="py-10">
       <div className="custom-container">
-        <div className="flex justify-between items-start gap-10">
-          <div className="lg:w-3/12">
+        <div className="lg:flex justify-between items-start gap-10">
+          <div className="lg:w-3/12 lg:mb-0 mb-14">
             <div className="card border">
               <div className="card-body">
                 <h2 className="text-2xl font-[500] mb-4">Wyszukaj</h2>
@@ -133,7 +133,7 @@ const Listings = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-9/12">
+          <div className="lg:w-9/12 lg:mb-0 mb-14">
             <div className="filter">
               <div className="flex justify-between items-center">
                 <div className="left">
@@ -153,7 +153,7 @@ const Listings = () => {
                       Apartamenty
                     </button>
                   </div>
-                  <button className="btn btn-gray rounded-full flex ml-4 justify-center items-center">
+                  <button className="btn fltr btn-gray rounded-full flex ml-4 justify-center items-center">
                    <RiListSettingsFill className="text-xl mr-2"/> Filtry <span className="ml-2 badge golden-badge">2</span>
                   </button>
                 </div>

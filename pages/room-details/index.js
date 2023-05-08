@@ -4,6 +4,7 @@ import React from "react";
 import { FaAngleRight } from "react-icons/fa";
 import DetailsHero from "../../components/DetailsHero/DetailsHero";
 import Details from "../../components/RoomDetails/RoomDetails";
+import CarouselSlider from "../../components/slider/Slider";
 
 
 const RoomDetails = () => {
@@ -43,6 +44,8 @@ const RoomDetails = () => {
       <DetailsHero/>
 
       <Details/>
+
+      <CarouselSlider/>
     </div>
   );
 };

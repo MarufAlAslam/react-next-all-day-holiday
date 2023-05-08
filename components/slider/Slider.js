@@ -55,59 +55,69 @@ const CarouselSlider = () => {
       <div className="flex mb-12 mt-14 justify-between items-center">
         <h1 className="text-3xl font-bold mb-0">Najczęściej wybierane</h1>
       </div>
-      <Carousel
-        dragging={false}
-        slidesToShow={4}
-        autoplay={true}
-        autoplayInterval={2000}
-        renderBottomCenterControls={null}
-        enableKeyboardControls={true}
-        renderCenterLeftControls={({ previousSlide }) => (
-          <button className="prev" onClick={previousSlide}>
-            <Image src={prev} alt="prev" />
-          </button>
-        )}
-        renderCenterRightControls={({ nextSlide }) => (
-          <button className="next" onClick={nextSlide}>
-            <Image src={next} alt="next" />
-          </button>
-        )}
-      >
+
+      <div className="carousel-holder">
+        <Carousel
+          dragging={false}
+          slidesToShow={4}
+          autoplay={true}
+          autoplayInterval={2000}
+          renderBottomCenterControls={null}
+          enableKeyboardControls={true}
+          renderCenterLeftControls={({ previousSlide }) => (
+            <button className="prev" onClick={previousSlide}>
+              <Image src={prev} alt="prev" />
+            </button>
+          )}
+          renderCenterRightControls={({ nextSlide }) => (
+            <button className="next" onClick={nextSlide}>
+              <Image src={next} alt="next" />
+            </button>
+          )}
+        >
+          {sliderData.map((item, index) => (
+            <div key={index}>
+              <Image src={item.image} alt="" />
+              <div className="py-4">
+                <p className="text-lg font-[600]">Podwójny pokój</p>
+                <p className="text-xs mt-2 flex justify-start text-[#757783] items-center">
+                  <FaMapMarkerAlt className="mr-2 text-golden" />
+                  {item.location}
+                </p>
+                <p className="font-[400] mt-2">
+                  <b>{item.rent}</b> / noc
+                </p>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+
+      <div className="single-items">
         {sliderData.map((item, index) => (
           <div key={index}>
             <Image src={item.image} alt="" />
             <div className="py-4">
               <p className="text-lg font-[600]">Podwójny pokój</p>
               <p className="text-xs mt-2 flex justify-start text-[#757783] items-center">
-                <FaMapMarkerAlt className="mr-2 text-golden"/>
+                <FaMapMarkerAlt className="mr-2 text-golden" />
                 {item.location}
               </p>
               <p className="font-[400] mt-2">
-                <b>
-                    {item.rent}
-                </b> / noc
+                <b>{item.rent}</b> / noc
               </p>
             </div>
           </div>
         ))}
-{/* 
-        <Image src={s2} alt="s2" />
-        <Image src={s3} alt="s3" />
-        <Image src={s4} alt="s4" />
-        <Image src={s1} alt="s1" />
-        <Image src={s2} alt="s2" />
-        <Image src={s3} alt="s3" />
-        <Image src={s4} alt="s4" /> */}
-      </Carousel>
-
+      </div>
 
       <div className="mt-8 text-center">
-      <Link
-            className="btn px-5 bg-white text-black rounded-full fs-14"
-            href={"/contact"}
-          >
-            Rezerwuj online <FiArrowUpRight className="ml-2 text-lg" />
-          </Link>
+        <Link
+          className="btn px-5 bg-white text-black rounded-full fs-14"
+          href={"/contact"}
+        >
+          Rezerwuj online <FiArrowUpRight className="ml-2 text-lg" />
+        </Link>
       </div>
     </div>
   );

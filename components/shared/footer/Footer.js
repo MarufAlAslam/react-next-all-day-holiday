@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="custom-container">
         <div className="lg:flex justify-between items-center pb-14">
           <div className="lg:w-1/2 w-full">
-            <h2 className="text-4xl text-white font-[500]">
+            <h2 className="md:text-4xl text-xl text-white font-[500]">
               Nie wahaj się skontaktować z nami! Nasz zespół jest tutaj, aby Ci
               pomóc.
             </h2>

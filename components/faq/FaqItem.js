@@ -4,7 +4,7 @@ const FaqItem = ({faq}) => {
     return (
         <details class="group p-4 border-b [&_summary::-webkit-details-marker]:hidden">
         <summary class="flex cursor-pointer items-center justify-between gap-1.5">
-          <h2 class="text-lg font-medium text-gray-900">
+          <h2 class="md:text-lg font-medium text-gray-900">
             {faq.question}
           </h2>
 

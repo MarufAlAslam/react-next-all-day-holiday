@@ -6,7 +6,7 @@ import Image from 'next/image'
 const NewsLetter = () => {
     return (
         <div className='custom-container py-8'>
-           <div className='card relative'>
+           <div className='card newsletter-card relative'>
              <Image src={newsletter} alt='newsletter' className='w-full h-full object-cover rounded-lg'/>
              <div className='card-body absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center'>
                 <h2 className='text-5xl font-[500] text-white text-center'>
