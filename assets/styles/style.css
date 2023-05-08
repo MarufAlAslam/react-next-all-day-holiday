@@ -328,4 +328,7 @@ ul.menu {
   /* position: relative !important; */
   left: 0 !important;
 }
+.py-14.custom-container.mx-auto {
+  padding-top: 0 !important;
+}
 }
