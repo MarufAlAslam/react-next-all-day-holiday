@@ -330,5 +330,6 @@ ul.menu {
 }
 .py-14.custom-container.mx-auto {
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 }
