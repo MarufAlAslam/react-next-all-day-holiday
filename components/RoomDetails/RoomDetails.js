@@ -1,8 +1,10 @@
-import { Card, DatePicker, Input, Progress } from "antd";
-import React from "react";
+import { Button, Card, DatePicker, Input, Progress } from "antd";
+import React, { useEffect, useState } from "react";
 import { CgSwap } from "react-icons/cg";
 import {
   FaCalendar,
+  FaRegThumbsDown,
+  FaRegThumbsUp,
   FaSearch,
   FaStar,
   FaStarHalf,
@@ -12,6 +14,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoBedSharp, IoPeople } from "react-icons/io5";
 
 const Details = () => {
+  const [reviewState, setReviewState] = useState([]);
   const roomDetailsData = [
     {
       id: 1,
@@ -25,32 +28,73 @@ const Details = () => {
       reviews: 261,
       details:
         "Obiekt Shellter Apartament Nadmorski położony jest w miejscowości Rogowo i oferuje klimatyzację. Odległość ważnych miejsc od obiektu: Plaża Dźwirzyno – 1,8 km, Plaża Rogowo – 2,3 km. Na miejscu zapewniono balkon, bezpłatny prywatny parking oraz bezpłatne WiFi.",
-      // reviews: [
-      //   {
-      //     id: 1,
-      //     name: "Patryk",
-      //     date: "02.11.2023",
-      //     feedback: "Przemiła obsługa, miły hotel blisko morza.",
-      //   },
-      //   {
-      //     id: 2,
-      //     name: "Marcin",
-      //     date: "02.11.2023",
-      //     feedback:
-      //       "Dobre śniadania, hotel blisko centrum i blisko morza. codzienne sprzątanie, ciepły basen z leżakami. w cenie powitalna kawa, herbata, piwo lub wino. w pokojach dostęp do wody, kawy i herbaty.",
-      //   },
-      //   {
-      //     id: 3,
-      //     name: "Izabela",
-      //     date: "02.11.2023",
-      //     feedback:
-      //       "W hotelu odpowiadało nam dosłownie wszystko, było pięknie, czysto, personel bardzo życzliwy i pomocny. Śniadania pyszne, różnorodne, każdy mógł wybrać coś dla siebie. Hotel w fajnej lokalizacji - blisko do morza oraz do centrum. Polecamy serdecznie! ❤️",
-      //   }
-      // ],
     },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const reviews = [
+    {
+      id: 1,
+      name: "Patryk",
+      date: "02.11.2023",
+      feedback: "Przemiła obsługa, miły hotel blisko morza.",
+      likes: 0,
+      dislikes: 0,
+    },
+    {
+      id: 2,
+      name: "Marcin",
+      date: "02.11.2023",
+      feedback:
+        "Dobre śniadania, hotel blisko centrum i blisko morza. codzienne sprzątanie, ciepły basen z leżakami. w cenie powitalna kawa, herbata, piwo lub wino. w pokojach dostęp do wody, kawy i herbaty.",
+      likes: 0,
+      dislikes: 0,
+    },
+    {
+      id: 3,
+      name: "Izabela",
+      date: "02.11.2023",
+      feedback:
+        "W hotelu odpowiadało nam dosłownie wszystko, było pięknie, czysto, personel bardzo życzliwy i pomocny. Śniadania pyszne, różnorodne, każdy mógł wybrać coś dla siebie. Hotel w fajnej lokalizacji - blisko do morza oraz do centrum. Polecamy serdecznie! ❤️",
+      likes: 0,
+      dislikes: 0,
+    },
+  ];
+
+  useEffect(() => {
+    setReviewState(reviews);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const { RangePicker } = DatePicker;
+
+  const increaseLikes = (id) => {
+    const newReviews = reviewState.map((review) => {
+      if (review.id === id) {
+        return {
+          ...review,
+          likes: review.likes + 1,
+        };
+      }
+      return review;
+    });
+
+    setReviewState(newReviews);
+  };
+
+  const decreaseLikes = (id) => {
+    const newReviews = reviewState.map((review) => {
+      if (review.id === id) {
+        return {
+          ...review,
+          dislikes: review.dislikes + 1,
+        };
+      }
+      return review;
+    });
+
+    setReviewState(newReviews);
+  };
   return (
     <div className="py-6">
       <div className="lg:flex justify-between items-start">
@@ -232,9 +276,9 @@ const Details = () => {
                 </Card>
 
                 {/* reviews */}
-                {/* <div className="mt-5">
-                  {room.reviews.map((review, index) => (
-                    <div key={index}>
+                <div className="mt-5">
+                  {reviewState.map((review, index) => (
+                    <div className="review-holder border-b py-8" key={index}>
                       <div className="flex justify-start items-center">
                         <FaStar className="text-golden" />
                         <FaStar className="text-golden" />
@@ -242,9 +286,37 @@ const Details = () => {
                         <FaStar className="text-golden" />
                         <FaStarHalf className="text-golden" />
                       </div>
+                      <div className="flex justify-start my-2 items-center">
+                        <span className="text-black font-[600]">
+                          {review.name}
+                        </span>
+                        <span className="text-[#757783] text-sm font-[500] ml-2">
+                          {review.date}
+                        </span>
+                      </div>
+                      <p className="font-[500] text-[#757783]">
+                        {review.feedback}
+                      </p>
+
+                      <div className="mt-5 flex gap-3">
+                        <Button
+                          onClick={() => increaseLikes(review.id)}
+                          className="flex justify-center items-center rounded-full border-[#ddd] text-[#757783]"
+                        >
+                          <FaRegThumbsUp className="mr-2" />{" "}
+                          <span>{review.likes}</span>
+                        </Button>
+                        <Button
+                          onClick={() => decreaseLikes(review.id)}
+                          className="flex justify-center items-center rounded-full border-[#ddd] text-[#757783]"
+                        >
+                          <FaRegThumbsDown className="mr-2" />{" "}
+                          <span>{review.dislikes}</span>
+                        </Button>
+                      </div>
                     </div>
                   ))}
-                </div> */}
+                </div>
               </div>
             </div>
           ))}
