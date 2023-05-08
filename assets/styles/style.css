@@ -201,6 +201,9 @@ iframe {
 .single-items{
   display: none;
 }
+input.bg-white{
+  background-color: white !important;
+}
 
 @media screen and (max-width: 992px) {
   .custom-container {
