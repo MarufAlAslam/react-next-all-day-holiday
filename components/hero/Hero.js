@@ -20,7 +20,7 @@ const Hero = () => {
                 <p className="font-[500] text-[#757783]">Lokalizacja</p>
                 <Input
                   value="Rogowo, Polska"
-                  className="border-0 p-0 text-lg font-bold"
+                  className="border-0 bg-white p-0 text-lg font-bold"
                 />
               </div>
             </div>
@@ -33,7 +33,7 @@ const Hero = () => {
                 <p className="font-[500] w-1/2 text-[#757783]">Wyjazd</p>
               </div>
               <RangePicker
-                className="w-full border-none p-0 text-xl text-black"
+                className="w-full bg-white border-none p-0 text-xl text-black"
                 placeholder={["czw. 13 kwi.", "czw. 13 kwi."]}
               />
             </div>
