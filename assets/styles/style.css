@@ -325,7 +325,7 @@ input.bg-white{
   background: transparent !important;
 }
 ul.menu {
-  position: relative !important;
+  /* position: relative !important; */
   left: 0 !important;
 }
 }
