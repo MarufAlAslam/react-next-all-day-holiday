@@ -198,6 +198,9 @@ iframe {
   border: unset;
   filter: grayscale(100%);
 }
+.single-items{
+  display: none;
+}
 
 @media screen and (max-width: 992px) {
   .custom-container {
@@ -308,5 +311,8 @@ iframe {
 }
 .hldr {
   margin-top: 20px;
+}
+.single-items{
+  display: block;
 }
 }
