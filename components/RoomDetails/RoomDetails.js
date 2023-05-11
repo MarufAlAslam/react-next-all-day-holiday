@@ -14,6 +14,14 @@ import {
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoBedSharp, IoPeople } from "react-icons/io5";
 import { FiArrowUpRight } from "react-icons/fi";
+import size from "../../assets/icons/size.svg";
+import guests from "../../assets/icons/geusts.svg";
+import baths from "../../assets/icons/baths.svg";
+import Image from "next/image";
+
+import map from "../../assets/icons/map.png";
+import calendar from "../../assets/icons/calendar.svg";
+import users from "../../assets/icons/users.png";
 
 const Details = () => {
   const [reviewState, setReviewState] = useState([]);
@@ -37,23 +45,6 @@ const Details = () => {
   const reviews = [
     {
       id: 1,
-      name: "Patryk",
-      date: "02.11.2023",
-      feedback: "Przemiła obsługa, miły hotel blisko morza.",
-      likes: 0,
-      dislikes: 0,
-    },
-    {
-      id: 2,
-      name: "Marcin",
-      date: "02.11.2023",
-      feedback:
-        "Dobre śniadania, hotel blisko centrum i blisko morza. codzienne sprzątanie, ciepły basen z leżakami. w cenie powitalna kawa, herbata, piwo lub wino. w pokojach dostęp do wody, kawy i herbaty.",
-      likes: 0,
-      dislikes: 0,
-    },
-    {
-      id: 3,
       name: "Izabela",
       date: "02.11.2023",
       feedback:
@@ -61,6 +52,24 @@ const Details = () => {
       likes: 0,
       dislikes: 0,
     },
+    {
+      id: 2,
+      name: "Patryk",
+      date: "02.11.2023",
+      feedback: "Przemiła obsługa, miły hotel blisko morza.",
+      likes: 0,
+      dislikes: 0,
+    },
+    {
+      id: 3,
+      name: "Marcin",
+      date: "02.11.2023",
+      feedback:
+        "Dobre śniadania, hotel blisko centrum i blisko morza. codzienne sprzątanie, ciepły basen z leżakami. w cenie powitalna kawa, herbata, piwo lub wino. w pokojach dostęp do wody, kawy i herbaty.",
+      likes: 0,
+      dislikes: 0,
+    },
+  
   ];
 
   useEffect(() => {
@@ -123,22 +132,28 @@ const Details = () => {
               <h2 className="text-4xl font-[500] text-black mt-2">
                 {room.name}
               </h2>
+              <p className="mb-4 text-[#757783]">
+                {room.address}
+              </p>
 
               <div className="md:flex mt-6 justify-start items-center">
                 <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:mt-0 mt-3">
-                  <CgSwap className="text-xl mr-1" />
+                  {/* <CgSwap className="text-xl mr-1" /> */}
+                  <Image src={size} alt="size" className="w-6 h-6 mr-3" />
                   <span className="text-[#757783] font-[600] text-sm">
                     {room.size} m<sup>2</sup>
                   </span>
                 </div>
                 <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                  <IoPeople className="mr-1" />
+                  {/* <IoPeople className="mr-1" /> */}
+                  <Image src={guests} alt="guests" className="w-6 h-6 mr-3" />
                   <span className="text-[#757783] font-[600] text-sm">
                     {room.guests} Gośći
                   </span>
                 </div>
                 <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                  <IoBedSharp className="mr-1" />
+                  {/* <IoBedSharp className="mr-1" /> */}
+                  <Image src={baths} alt="baths" className="w-6 h-6 mr-3" />
                   <span className="text-[#757783] font-[600] text-sm">
                     {room.beds} Sypialnie
                   </span>
@@ -160,41 +175,62 @@ const Details = () => {
                 <p className="text-lg mb-2 font-[600] text-black">
                   Udogodnienia pokoju
                 </p>
-                <div className="md:flex flex-wrap mt-4 justify-start items-center">
+                <div className="md:flex flex-wrap mt-4 justify-start items-center  lg:w-2/3 w-full gap-y-4">
                   <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:mt-0 mt-3">
-                    <CgSwap className="text-xl mr-1" />
+                    {/* <CgSwap className="text-xl mr-1" /> */}
+                    <Image src={size} alt="size" className="w-6 h-6 mr-3" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.size} m<sup>2</sup>
                     </span>
                   </div>
                   <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                    <IoPeople className="mr-1" />
+                    {/* <IoPeople className="mr-1" /> */}
+                    <Image src={guests} alt="guests" className="w-6 h-6 mr-3" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.guests} Gośći
                     </span>
                   </div>
                   <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                    <IoBedSharp className="mr-1" />
+                    {/* <IoBedSharp className="mr-1" /> */}
+                    <Image src={baths} alt="baths" className="w-6 h-6 mr-3" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.beds} Sypialnie
                     </span>
                   </div>
                   <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                    <CgSwap className="text-xl mr-1" />
+                    {/* <IoBedSharp className="mr-1" /> */}
+                    <Image src={baths} alt="baths" className="w-6 h-6 mr-3" />
+                    <span className="text-[#757783] font-[600] text-sm">
+                      {room.beds} Sypialnie
+                    </span>
+                  </div>
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
+                    {/* <IoBedSharp className="mr-1" /> */}
+                    <Image src={baths} alt="baths" className="w-6 h-6 mr-3" />
+                    <span className="text-[#757783] font-[600] text-sm">
+                      {room.beds} Sypialnie
+                    </span>
+                  </div>
+                  <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
+                    {/* <CgSwap className="text-xl mr-1" /> */}
+                    <Image src={size} alt="size" className="w-6 h-6 mr-3" />
                     <span className="text-[#757783] font-[600] text-sm">
                       {room.size} m<sup>2</sup>
                     </span>
                   </div>
+                  
                   <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                    <IoPeople className="mr-1" />
+                    {/* <IoBedSharp className="mr-1" /> */}
+                    <Image src={baths} alt="baths" className="w-6 h-6 mr-3" />
                     <span className="text-[#757783] font-[600] text-sm">
-                      {room.guests} Gośći
+                      {room.beds} Sypialnie
                     </span>
                   </div>
                   <div className="flex border border-[#DDDDDD] p-3 rounded-md justify-start items-center md:ml-5 md:mt-0 mt-3">
-                    <IoBedSharp className="mr-1" />
+                    {/* <IoPeople className="mr-1" /> */}
+                    <Image src={guests} alt="guests" className="w-6 h-6 mr-3" />
                     <span className="text-[#757783] font-[600] text-sm">
-                      {room.beds} Sypialnie
+                      {room.guests} Gośći
                     </span>
                   </div>
                 </div>
@@ -345,7 +381,8 @@ const Details = () => {
               <h2 className="text-2xl font-[500] mb-4">Wyszukaj</h2>
 
               <div className="location-search border rounded-full px-3 py-2 w-full flex justify-start items-center">
-                <HiOutlineLocationMarker className="text-2xl" />
+                {/* <HiOutlineLocationMarker className="text-2xl" /> */}
+                <Image src={map} alt="map" className="w-6 h-6 mr-3" />
                 <div className="content w-full ml-3">
                   <p className="font-[500] text-xs text-[#757783]">
                     Lokalizacja
@@ -359,7 +396,8 @@ const Details = () => {
 
               <div className="w-full border rounded-full px-5 py-3">
                 <div className="flex justify-start items-center">
-                  <FaCalendar className="text-2xl mr-2" />
+                  {/* <FaCalendar className="text-2xl mr-2" /> */}
+                  <Image src={calendar} alt="calendar" className="w-6 h-6 mr-3" />
                   <div>
                     <div className="flex justify-start items-center">
                       <p className="font-[500] text-xs w-1/2 text-[#757783]">
@@ -379,7 +417,8 @@ const Details = () => {
               </div>
 
               <div className="w-full border rounded-full flex justify-start items-center px-5 py-3">
-                <FaUsers className="text-2xl" />
+                {/* <FaUsers className="text-2xl" /> */}
+                <Image src={users} alt="users" className="w-6 h-6 mr-3" />
                 <div className="content w-full ml-3">
                   <p className="font-[500] text-xs text-[#757783]">
                     Ilość osób

@@ -8,6 +8,11 @@ import {RiListSettingsFill} from "react-icons/ri";
 import r1 from "../../assets/images/r1.png";
 import ListingItemCard from "../../components/ListingItemCard/ListingItemCard";
 
+import map from '../../assets/icons/map.png'
+import calendar from '../../assets/icons/calendar.svg'
+import users from '../../assets/icons/users.png'
+import Image from "next/image";
+
 const Listings = () => {
   const { RangePicker } = DatePicker;
   const roomData = [
@@ -82,7 +87,8 @@ const Listings = () => {
                 <h2 className="text-2xl font-[500] mb-4">Wyszukaj</h2>
 
                 <div className="location-search border rounded-full px-3 py-2 w-full flex justify-start items-center">
-                  <HiOutlineLocationMarker className="text-2xl" />
+                  {/* <HiOutlineLocationMarker className="text-2xl" /> */}
+                  <Image src={map} alt="map" className="w-6 h-6 mr-3" />
                   <div className="content w-full ml-3">
                     <p className="font-[500] text-xs text-[#757783]">
                       Lokalizacja
@@ -96,7 +102,8 @@ const Listings = () => {
 
                 <div className="w-full border rounded-full px-5 py-3">
                   <div className="flex justify-start items-center">
-                    <FaCalendar className="text-2xl mr-2" />
+                    {/* <FaCalendar className="text-2xl mr-2" /> */}
+                    <Image src={calendar} alt="calendar" className="w-6 h-6 mr-3" />
                     <div>
                       <div className="flex justify-start items-center">
                         <p className="font-[500] text-xs w-1/2 text-[#757783]">
@@ -116,7 +123,8 @@ const Listings = () => {
                 </div>
 
                 <div className="w-full border rounded-full flex justify-start items-center px-5 py-3">
-                  <FaUsers className="text-2xl" />
+                  {/* <FaUsers className="text-2xl" /> */}
+                  <Image src={users} alt="users" className="w-6 h-6 mr-3" />
                   <div className="content w-full ml-3">
                     <p className="font-[500] text-xs text-[#757783]">
                       Ilość osób

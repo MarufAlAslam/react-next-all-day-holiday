@@ -8,6 +8,9 @@ import s3 from "../../assets/images/s3.png";
 import s4 from "../../assets/images/s4.png";
 import prev from "../../assets/images/prev.png";
 import next from "../../assets/images/next.png";
+
+import goldenMap from "../../assets/icons/gold-map.svg";
+
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -81,7 +84,9 @@ const CarouselSlider = () => {
               <div className="py-4">
                 <p className="text-lg font-[600]">Podwójny pokój</p>
                 <p className="text-xs mt-2 flex justify-start text-[#757783] items-center">
-                  <FaMapMarkerAlt className="mr-2 text-golden" />
+                  {/* <FaMapMarkerAlt className="mr-2 text-golden" /> */}
+
+                  <Image src={goldenMap} alt="map" className="w-2 gold-map" />
                   {item.location}
                 </p>
                 <p className="font-[400] mt-2">
@@ -116,7 +121,7 @@ const CarouselSlider = () => {
           className="btn px-5 bg-white text-black rounded-full fs-14"
           href={"/contact"}
         >
-          Rezerwuj online <FiArrowUpRight className="ml-2 text-lg" />
+          Rezerwuj online <FiArrowUpRight className="ml-2 text-lg text-golden" />
         </Link>
       </div>
     </div>

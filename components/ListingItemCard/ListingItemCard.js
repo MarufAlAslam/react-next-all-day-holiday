@@ -8,6 +8,10 @@ import { IoPeople, IoBedSharp } from "react-icons/io5";
 import { AiOutlineHeart } from "react-icons/ai";
 import Link from "next/link";
 
+import size from "../../assets/icons/size.svg";
+import guests from "../../assets/icons/geusts.svg";
+import baths from "../../assets/icons/baths.svg";
+
 const ListingItemCard = (room) => {
   return (
     <Link href={"/room-details"}>
@@ -44,19 +48,22 @@ const ListingItemCard = (room) => {
 
             <div className="flex mt-6 justify-start items-center">
               <div className="flex lg:justify-start justify-center items-center">
-                <CgSwap className="text-xl mr-1" />
+                {/* <CgSwap className="text-xl mr-1" /> */}
+                <Image src={size} alt="size" className="w-6 h-6 mr-3" />
                 <span className="text-[#757783] font-[600] text-sm">
                   {room.room.size} m<sup>2</sup>
                 </span>
               </div>
               <div className="flex justify-start items-center ml-3">
-                <IoPeople className="mr-1" />
+                {/* <IoPeople className="mr-1" /> */}
+                <Image src={guests} alt="guests" className="w-6 h-6 mr-3" />
                 <span className="text-[#757783] font-[600] text-sm">
                   {room.room.guests} Gośći
                 </span>
               </div>
               <div className="flex justify-start items-center ml-3">
-                <IoBedSharp className="mr-1" />
+                {/* <IoBedSharp className="mr-1" /> */}
+                <Image src={baths} alt="baths" className="w-6 h-6 mr-3" />
                 <span className="text-[#757783] font-[600] text-sm">
                   {room.room.beds} Sypialnie
                 </span>

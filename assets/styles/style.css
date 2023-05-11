@@ -5,9 +5,11 @@
 }
 
 .custom-container {
-  max-width: 1340px;
+  max-width: 1440px;
   margin: auto;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navbar a {
@@ -116,7 +118,7 @@ button.next {
 
 button.prev {
   position: absolute;
-  right: 70px;
+  right: 60px;
   top: -88px;
 }
 .slide img {
@@ -192,6 +194,24 @@ button.prev {
   background-color: white !important;
 }
 
+.btn:hover, .btn:hover * {
+  background-color: #bda067 !important;
+  color: white !important;
+  border-color: #bda067 !important;
+}
+
+.relative input{
+  background-color: transparent !important;
+}
+.fltr {
+  height: 65px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.rounded-xl {
+  border-radius: 1.2rem;
+}
+
 iframe {
   width: 100%;
   height: 500px;
@@ -203,6 +223,21 @@ iframe {
 }
 input.bg-white{
   background-color: white !important;
+}
+
+
+.menu .active {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+img.w-2.gold-map {
+    width: 17px !important;
+    margin-right: 5px;
+}
+
+.navbar a.btn.white{
+  color: white !important;
 }
 
 @media screen and (max-width: 992px) {

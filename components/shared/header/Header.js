@@ -167,14 +167,14 @@ const Header = () => {
         <div className="navbar-end lg:flex hidden">
           <Link
             href={"tel:+48 512 569 822"}
-            className="flex justify-start items-center btn bg-transparent hover:bg-transparent fs-14 border-none text-black"
+            className="flex mr-2 justify-start items-center btn bg-transparent hover:bg-transparent fs-14 border-none text-black"
           >
             <FiPhoneCall className="mr-2 text-golden" />
             +48 512 569 822
           </Link>
 
           <Link
-            className="btn px-5 bg-black text-white rounded-full fs-14"
+            className="btn white px-5 bg-black text-white rounded-full fs-14"
             href={"/contact"}
           >
             Rezerwuj online <FiArrowUpRight className="ml-2 text-lg" />

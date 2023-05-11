@@ -5,9 +5,11 @@ import Link from "next/link";
 import { BsEnvelope } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 
+import env from '../../assets/icons/env.svg'
+
 const TeamCard = ({ team }) => {
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-xl">
       <div className="p-6">
         <div className="text-center">
           <Image
@@ -22,7 +24,8 @@ const TeamCard = ({ team }) => {
             href={"mailto:" + team.email}
             className="btn w-full lowercase text-xs btn-outline-golden rounded-full mt-4"
           >
-            <BsEnvelope className="mr-2" />
+            {/* <BsEnvelope className="mr-2" /> */}
+            <Image src={env} alt="env" className="w-4 mr-2" />
             {team.email}
           </Link>
           <Link

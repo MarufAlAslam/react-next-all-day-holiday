@@ -6,6 +6,9 @@ import { Card, Input, DatePicker, Select } from "antd";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FaUsers, FaSearch } from "react-icons/fa";
 
+import map from '../../assets/icons/map.png'
+import users from '../../assets/icons/users.png'
+
 const Hero = () => {
   const { RangePicker } = DatePicker;
   return (
@@ -15,7 +18,8 @@ const Hero = () => {
         <div className="p-8 card-bdy">
           <div className="search-box px-5 flex justify-center items-center">
             <div className="location-search p-3 w-full flex justify-start items-center">
-              <HiOutlineLocationMarker className="text-2xl" />
+              {/* <HiOutlineLocationMarker className="text-2xl" /> */}
+              <Image src={map} alt="map" className="w-6 h-6 mr-3" />
               <div className="content w-full ml-3">
                 <p className="font-[500] text-[#757783]">Lokalizacja</p>
                 <Input
@@ -39,7 +43,8 @@ const Hero = () => {
             </div>
 
             <div className="w-full flex justify-start items-center px-5 py-3">
-              <FaUsers className="text-2xl" />
+              {/* <FaUsers className="text-2xl" /> */}
+              <Image src={users} alt="users" className="w-6 h-6 mr-3" />
               <div className="content w-full ml-3">
                 <p className="font-[500] text-[#757783]">Ilość osób</p>
                 <select className="w-full py-3 border-none">
