@@ -12,7 +12,7 @@ import users from '../../assets/icons/users.png'
 const Hero = () => {
   const { RangePicker } = DatePicker;
   return (
-    <div className="py-14 custom-container mx-auto">
+    <div className="py-14 custom-container mx-auto hero-custom">
       <Card className="border-0 p-0 relative">
         <Image src={hero} className="w-full" alt="hero" />
         <div className="p-8 card-bdy">

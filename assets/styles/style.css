@@ -193,11 +193,15 @@ button.prev {
 .tab-btn.active {
   background-color: white !important;
 }
-
-.btn:hover, .btn:hover * {
+.hero-custom .btn:hover, .hero-custom .btn:hover *, .custom-container.pb-8 .btn:hover, .custom-container.pb-8 .btn:hover * {
   background-color: #bda067 !important;
   color: white !important;
   border-color: #bda067 !important;
+}
+.btn:hover, .btn:hover * {
+    background-color: white !important;
+    color: #bda067 !important;
+    border-color: #bda067 !important;
 }
 
 .relative input{
@@ -239,6 +243,11 @@ img.w-2.gold-map {
 .navbar a.btn.white{
   color: white !important;
 }
+
+select {
+    background: white;
+}
+
 
 @media screen and (max-width: 992px) {
   .custom-container {
@@ -366,5 +375,60 @@ ul.menu {
 .py-14.custom-container.mx-auto {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.hero-custom {
+  background: url("../images/mob.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 98%;
+  margin: auto;
+}
+.hero-custom img {
+  display: none;
+}
+.search-box {
+  margin-top: 0;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.hero-custom.py-14.custom-container.mx-auto {
+  padding-top: 150px !important;
+  padding-bottom: 15px !important;
+}
+.hero-custom .flex {
+    width: 100%;
+}
+.newsletter-card .flex.w-full.p-1.rounded-full.bg-white.flex-row.justify-center.items-center {
+  flex-direction: column;
+  width: 100%;
+  border-radius: 7px;
+}
+.newsletter-card input {
+    border: 1px solid black !important;
+    margin-bottom: 20px;
+    width: 100%
+}
+.newsletter-card .btn {
+    width: 100%;
+}
+.newsletter-card .card-body {
+  padding: 10px;
+}
+.newsletter-card form {
+  width: 100%;
+}
+.newsletter-card .flex.w-full.p-1.rounded-full.bg-white.flex-row.justify-center.items-center {
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.btn:hover * {
+  background-color: white;
+  color: white !important;
+  border-color: #bda067 !important;
 }
 }
